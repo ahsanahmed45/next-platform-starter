@@ -36,12 +36,14 @@ export default function Page() {
                 >
                     Read the Docs
                 </Link>
-            </section>
-            {!!ctx && (
-                <section className="flex flex-col gap-4">
-                    <Markdown content={contextExplainer} />
-                    <Ahsan />
-                </section>
+           
+<section className="flex flex-col gap-4">
+    <Markdown content={contextExplainer} />
+    <Ahsan />
+    <img src="https://content.presspage.com/uploads/2431/1920_emiratesboeing777-300er.jpg?10000" alt="Emirates Boeing 777-300ER" />
+</section>
+
+            
             )}
             <section className="flex flex-col gap-4">
                 <Markdown content={preDynamicContentExplainer} />

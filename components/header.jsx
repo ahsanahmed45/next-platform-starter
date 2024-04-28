@@ -1,12 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
    
-                  
- <img src="https://throughbrandneweyes.files.wordpress.com/2014/10/emirates_banner.jpg?w=672&h=255&crop=1" />
+               
                
 
 const navItems = [
-    { linkText: 'Home', href: '/' }
+    { linkText: 'Emirates - Fly Better',  '/' }
     
 ];
 

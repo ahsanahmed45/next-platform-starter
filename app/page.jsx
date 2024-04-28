@@ -28,10 +28,10 @@ export default function Page() {
         <main className="flex flex-col gap-8 sm:gap-16">
             <section className="flex flex-col items-start gap-3 sm:gap-4">
                 <ContextAlert />
-                <h1 className="mb-0">Netlify Platform Starter - Next.js</h1>
-                <p className="text-lg">Get started with Next.js and Netlify in seconds.</p>
+                <h1 className="mb-0">Emirates Airlines</h1>
+                <p className="text-lg">FLY EMIRATES</p>
                 <Link
-                    href="https://docs.netlify.com/frameworks/next-js/overview/"
+                    href="https://drive.usercontent.google.com/uc?id=1kgzJGxrebAh1OXIQlwJBn22Xvw0_kZSv&export=download"
                     className="btn btn-lg btn-primary sm:btn-wide"
                 >
                     Read the Docs
@@ -53,11 +53,5 @@ export default function Page() {
     );
 }
 
-function RuntimeContextCard() {
-    const title = `Netlify Context: running in ${ctx} mode.`;
-    if (ctx === 'dev') {
-        return <Card title={title} text="Next.js will rebuild any page you navigate to, including static pages." />;
-    } else {
-        return <Card title={title} text="This page was statically-generated at build time." />;
-    }
+
 }

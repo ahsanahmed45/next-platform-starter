@@ -42,16 +42,16 @@ export default function Page() {
                  <p className="text-lg">Sultan Taher</p>
                     <p className="text-lg">Sultan Alhajri</p>
                 
-<section className="flex flex-col gap-4">
-    <Markdown content={contextExplainer} />
-    <img src="https://content.presspage.com/uploads/2431/1920_emiratesboeing777-300er.jpg?10000" alt="Emirates Boeing 777-300ER" />
 </section>
-
-            
+            {!!ctx && (
+                <section className="flex flex-col gap-4">
+                    <Markdown content={contextExplainer} />
+                    <img src="https://content.presspage.com/uploads/2431/1920_emiratesboeing777-300er.jpg?10000" alt="Emirates Boeing 777-300ER" />
+                </section>
             )}
             <section className="flex flex-col gap-4">
                 <Markdown content={preDynamicContentExplainer} />
-                <Ahsan />
+                <RandomQuote />
                 <Markdown content={postDynamicContentExplainer} />
             </section>
             {/* !!cards?.length && <CardsGrid cards={cards} /> */}

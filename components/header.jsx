@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
    
-                <h2 className="mb-0">Emirates - Fly Better</h2>
+      
                
 
 const navItems = [
-    { linkText: '<h2 className="mb-0">Emirates - Fly Better</h2>',  '/' }
+   <h2 className="mb-0">Emirates - Fly Better</h2>
     
 ];
 

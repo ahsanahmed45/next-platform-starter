@@ -2,6 +2,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 
+const navItems = [
+    { linkText: 'Home', href: '/' }
+    
+];
 
 export function Header() {
     return (

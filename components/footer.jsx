@@ -7,7 +7,7 @@ export function Footer() {
             
                 <section className="flex flex-col gap-4">
                   
-                    <img src="https://image.similarpng.com/very-thumbnail/2020/04/UAE-united-arab-emirates-flag-png.png" />
+                    <img src="https://thumbs.dreamstime.com/z/banner-inscription-flights-to-united-arab-banner-inscription-flights-to-united-arab-emirates-blue-107127486.jpg" />
                 </section>
            
             </p>

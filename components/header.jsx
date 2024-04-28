@@ -2,16 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 
-                <section className="flex flex-col gap-4">
-                  
-                    <img src="https://image.similarpng.com/very-thumbnail/2020/04/UAE-united-arab-emirates-flag-png.png" />
-                </section>
-         
-
-const navItems = [
-    { linkText: 'Home', href: '/' }
-    
-];
 
 export function Header() {
     return (

@@ -4,10 +4,9 @@ import Link from 'next/link';
       
                
 
-const navItems = [
    <h2 className="mb-0">Emirates - Fly Better</h2>
     
-];
+
 
 export function Header() {
     return (

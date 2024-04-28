@@ -31,7 +31,7 @@ export function Header() {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <Image src={githubLogo} alt="GitHub logo" className="w-7" />
+                    
                 </Link>
             </div>
         </nav>

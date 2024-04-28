@@ -52,6 +52,12 @@ export default function Page() {
         </main>
     );
 }
-
+function RuntimeContextCard() {
+    const title = `Netlify Context: running in ${ctx} mode.`;
+    if (ctx === 'dev') {
+        return <Card title={title} text="Next.js will rebuild any page you navigate to, including static pages." />;
+    } else {
+        return <Card title={title} text="This page was statically-generated at build time." />;
+    }
 
 }

@@ -1,40 +1,67 @@
-Performance Management - Emirates Airlines
-Student Names:
-Aisha
-Mohammed Salman
-Sultan Taher
-Sultan Alhajri
-Introduction: Emirates Airlines, headquartered in Dubai, is one of the global carriers that is very popular for its highly luxurious style of flying and superior-to-the-rest services.
+import Link from 'next/link';
+import { Card } from 'components/card';
+import { RandomQuote } from 'components/random-quote';
+import { Markdown } from 'components/markdown';
+import { ContextAlert } from 'components/context-alert';
+import { getNetlifyContext } from 'utils';
 
-Mission: Emirates Airlines aims to become the global leader in outstanding air travel by providing unparalleled quality, safety, and comfort to all its passengers.
+const cards = [
+    //{ text: 'Hello', linkText: 'someLink', href: '/' }
+];
 
-Vision: Emirates aims to compete with its global airline competitors in luxury, innovation, and perfection.
+const contextExplainer = `
+The card below is rendered on the server based on the value of \`process.env.CONTEXT\` 
+([docs](https://docs.netlify.com/configure-builds/environment-variables/#build-metadata)):
+`;
 
-Goals: This organization tries to create new standards by innovating, optimizing operations, and prioritizing consumer needs.
+const preDynamicContentExplainer = `
+The card content below is fetched by the client-side from \`/quotes/random\` (see file \`app/quotes/random/route.js\`) with a different quote shown on each page load:
+`;
 
-Objectives of the Performance Management:
-Enhancing Employee Performance.
-Aligning Individual and Corporate Goals, Through setting SMART goals.
-Identifying the Training and Development Needs of its employees.
-The process is thus assisting in rewarding merit, granting employee incentives, and granting opportunities for career advancements.
-Flow Chart of the Performance Management Process
-Goal Setting
-Performance Monitoring
-Performance Evaluation
-Development Planning
-Small Bonuses and Appreciation
-HR Department Overview
-The Human Resources (HR) department at Emirates Airlines is the key contributor to the company's capability to attract, grow and retain the top performing employees.
+const postDynamicContentExplainer = `
+On Netlify, Next.js Route Handlers are automatically deployed as [Serverless Functions](https://docs.netlify.com/functions/overview/).
+Alternatively, you can add Serverless Functions to any site regardless of framework, with acccess to the [full context data](https://docs.netlify.com/functions/api/).
 
-The roles provided by the HR department are:
+And as always with dynamic content, beware of layout shifts & flicker! (here, we aren't...)
+`;
 
-Recruitment and Talent Acquisition
-Training and Development
-Performance Management
-Employee Relations
-Compensation and Benefits
-HR Policy Development
-References
-Alsuwaidi, M., Alshurideh, M., Al Kurdi, B., & Salloum, S. A. (2021). Performance appraisal on employees’ motivation: A comprehensive analysis. In Proceedings of the International Conference on Advanced Intelligent Systems and Informatics 2020 (pp. 681-693). Springer International Publishing.
+const ctx = getNetlifyContext();
 
-Thank You
+export default function Page() {
+    return (
+        <main className="flex flex-col gap-8 sm:gap-16">
+            <section className="flex flex-col items-start gap-3 sm:gap-4">
+                <ContextAlert />
+                <h1 className="mb-0">Netlify Platform Starter - Next.js</h1>
+                <p className="text-lg">Get started with Next.js and Netlify in seconds.</p>
+                <Link
+                    href="https://docs.netlify.com/frameworks/next-js/overview/"
+                    className="btn btn-lg btn-primary sm:btn-wide"
+                >
+                    Read the Docs
+                </Link>
+            </section>
+            {!!ctx && (
+                <section className="flex flex-col gap-4">
+                    <Markdown content={contextExplainer} />
+                    <RuntimeContextCard />
+                </section>
+            )}
+            <section className="flex flex-col gap-4">
+                <Markdown content={preDynamicContentExplainer} />
+                <RandomQuote />
+                <Markdown content={postDynamicContentExplainer} />
+            </section>
+            {/* !!cards?.length && <CardsGrid cards={cards} /> */}
+        </main>
+    );
+}
+
+function RuntimeContextCard() {
+    const title = `Netlify Context: running in ${ctx} mode.`;
+    if (ctx === 'dev') {
+        return <Card title={title} text="Next.js will rebuild any page you navigate to, including static pages." />;
+    } else {
+        return <Card title={title} text="This page was statically-generated at build time." />;
+    }
+}

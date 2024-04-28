@@ -40,12 +40,12 @@ export default function Page() {
             {!!ctx && (
                 <section className="flex flex-col gap-4">
                     <Markdown content={contextExplainer} />
-                    <RuntimeContextCard />
+                    <Ahsan />
                 </section>
             )}
             <section className="flex flex-col gap-4">
                 <Markdown content={preDynamicContentExplainer} />
-                <RandomQuote />
+                <Ahsan />
                 <Markdown content={postDynamicContentExplainer} />
             </section>
             {/* !!cards?.length && <CardsGrid cards={cards} /> */}

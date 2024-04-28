@@ -10,7 +10,7 @@ const cards = [
 ];
 
 const contextExplainer = `
-Emirates Airlines, headquartered in Dubai, is one of the global carriers that is very popular for its highly luxurious style of flying and its superior-to-the-rest services. 
+Emirates Airlines, headquartered in Dubai is one of the global carriers that is very popular for its highly luxurious style of flying and its superior-to-the-rest services. 
 `;
 
 const preDynamicContentExplainer = `

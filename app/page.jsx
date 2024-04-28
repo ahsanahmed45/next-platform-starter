@@ -36,10 +36,14 @@ export default function Page() {
                 >
                     Read the Docs
                 </Link>
-           
+                 <h2 className="text-lg">Student Names:</h2>
+                 <p className="text-lg">Aisha</p>
+                 <p className="text-lg">Mohammed Salman</p>
+                 <p className="text-lg">Sultan Taher</p>
+                    <p className="text-lg">Sultan Alhajri</p>
+                
 <section className="flex flex-col gap-4">
     <Markdown content={contextExplainer} />
-    <Ahsan />
     <img src="https://content.presspage.com/uploads/2431/1920_emiratesboeing777-300er.jpg?10000" alt="Emirates Boeing 777-300ER" />
 </section>
 

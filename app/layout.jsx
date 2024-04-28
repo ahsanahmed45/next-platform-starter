@@ -4,7 +4,7 @@ import { Header } from '../components/header';
 
 export const metadata = {
     title: {
-        template: '%s | Netlify',
+        template: '%s | Emirates',
         default: 'Emirates'
     }
 };

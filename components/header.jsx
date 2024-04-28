@@ -2,8 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
    
  const navItems = [
-    { linkText: 'Home', href: '/' }
-  
+    { linkText: 'Home', href: '/' },
+   { linkText: 'Revalidation', href: '/revalidation' }
 ];
     
 
